@@ -1,0 +1,104 @@
+.log-in {
+    background-color: #006d77;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .log-in-content {
+        background-color: #f6f6f6;
+        position: absolute;
+        width: 30%;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        border-radius: 50px 0 50px 0;
+        transform: translate(-50%, -50%);
+
+        .log-in-rela {
+            position: relative;
+            width: 100%;
+            padding: 70px 50px;
+            .title{
+                position: absolute;
+                top: -15%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                text-align: center;
+                color: #f6f6f6;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+            }
+            input {
+                margin-top: 15px;
+                height: 50px;
+            }
+
+            input::placeholder {
+                color: #00000021;
+            }
+
+            input:focus {
+                box-shadow: none;
+                border: 3px solid #006d778f;
+            }
+            .text-muted{
+                color: red !important;
+            }
+            .btn-submit {
+                background-color: #006d77bf;
+                margin-top: 10px;
+                width: 100%;
+                font-weight: bold;
+                color: #f6f6f6;
+                height: 50px;
+                opacity: .5;
+            }
+            .btn-submit:hover{
+                background-color: #006D77;
+            }
+
+            .ul-for-got {
+                width: 100%;
+                display: flex;
+                margin-left: -20px;
+                justify-content: space-between;
+                position: absolute;
+                top: 107%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #f6f6f6;
+                font-size: 12px;
+                li {
+                    list-style: none;
+                    a {
+                        color: #c9c9c9c9;
+                        text-decoration: none;
+                        font-weight: 800;
+                    }
+                    transition: all ease-in-out;
+                }
+                li:hover a{
+                    color:#f6f6f6
+                }
+            }
+        }
+    }
+    @media(max-width: 1050px) {
+        .log-in-content {
+            width: 80%;
+            .log-in-rela {
+                padding: 50px 20px;
+                width: 100%;
+                .ul-for-got{
+                    display: block;
+                    li{
+                        display: block;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+}

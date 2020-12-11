@@ -1,0 +1,28 @@
+<div class="log-in">
+    <div class="log-in-content ">
+        <div class="log-in-rela">
+            <div class="title animate__animated animate__fadeIn animate__delay-4s">
+                <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+                <h2>Welcome Back!</h2>
+            </div>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="form-group animate__animated animate__fadeInLeftBig animate__delay-1s">
+                    <input #name="ngModel" type="Email" class="form-control" placeholder="Email Address" required email
+                        ngModel name="name">
+                    <small *ngIf="name.touched && name.errors?.email" id="emailHelp"
+                        class="form-text text-muted">Plase Enter Your @ Email Address.</small>
+                </div>
+                <div class="form-group animate__animated animate__zoomInRight animate__delay-2s">
+                    <input type="password" class="form-control" placeholder="Password" required>
+                </div>
+                <button class="btn btn-submit animate__animated animate__fadeInUpBig animate__delay-3s"
+                    type="submit" routerLink="/sign-up">LOGIN</button>
+            </form>
+            <ul class="ul-for-got animate__animated animate__fadeIn animate__delay-5s">
+                <li><a routerLink="/for-got">Forgot Your Password?</a></li>
+                <li>Don't Have An Account? <a routerLink="/sign-up">SignUp</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
